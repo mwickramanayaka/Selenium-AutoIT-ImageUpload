@@ -24,7 +24,9 @@ public class AutoITDemo {
 		driver.findElement(By.id("fileUploadButton")).click();
 		
 		//calling AutoIT script
-		Runtime.getRuntime().exec("D:\\seleniumTests\\inprogress\\AutoIT\\FileUploadScript.exe"); 
+		String projectPath = System.getProperty("user.dir");
+		
+		Runtime.getRuntime().exec(projectPath+"\\src\\test\\resources\\FileUploadScript.exe"); 
 		
 		Thread.sleep(3000);
 		//driver.close();
